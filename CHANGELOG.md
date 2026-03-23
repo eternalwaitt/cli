@@ -1,5 +1,13 @@
 # @googleworkspace/cli
 
+## 0.18.2
+
+### Patch Changes
+
+- d679401: Fix `mask_secret` panic on multi-byte UTF-8 secrets by using char-based indexing instead of byte-offset slicing
+- d341de2: Handle --help/-h in `gws auth setup` before launching the setup wizard, preventing accidental project creation when users just want usage info
+- b4d5e26: Fix auth error propagation: properly propagate errors when token directory creation or permission setting fails, instead of silently ignoring them
+
 ## 0.18.1
 
 ### Patch Changes
